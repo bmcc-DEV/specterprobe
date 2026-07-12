@@ -1,4 +1,4 @@
-# 🔬 EAEA — Specter Probe
+# EAEA — Specter Probe
 
 > *"O que este hardware faz?" em vez de "Como este hardware foi implementado?"*
 
