@@ -1,10 +1,11 @@
 pub mod acquisition;
+pub mod behavior;
+pub mod compat;
+pub mod generate;
+pub mod genome;
+pub mod knowledge;
 pub mod lift;
 pub mod mmio;
-pub mod behavior;
-pub mod genome;
-pub mod generate;
-pub mod knowledge;
 
 pub mod prelude {
     pub use crate::acquisition::acquire;

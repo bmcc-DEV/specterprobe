@@ -73,6 +73,18 @@ fn scan_firmware_dir_recursive(
                     extracted_path: Some(path.clone()),
                 }]
             }
+            n if n.ends_with(".bin") && !n.contains("Gpt_entry")
+                && !n.contains("u-boot") && !n.contains("fdl1")
+                && !n.contains("lk-") && !n.contains("sml-")
+                && !n.contains("teecfg") && !n.contains("tos-") => {
+                let name = n.trim_end_matches(".bin");
+                vec![PartitionInfo {
+                    name: format!("firmware_{}", name),
+                    size: fs::metadata(&path)?.len(),
+                    fs_type: "firmware".into(),
+                    extracted_path: Some(path.clone()),
+                }]
+            }
             _ => continue,
         };
 
