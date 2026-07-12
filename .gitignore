@@ -1,0 +1,10 @@
+output*/
+target/
+*.zip
+*.raw
+*.ll
+*.json
+*.img
+*.bin
+Firmware*/
+Motorola_Firmware/
